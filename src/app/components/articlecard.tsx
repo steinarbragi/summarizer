@@ -1,16 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+
+import { Dispatch, SetStateAction } from "react"
+
 export default function ArticleCard({
-    source, 
-    author, 
-    title, 
-    description, 
-    url, 
-    urlToImage, 
-    publishedAt, 
-    content
-}: Article) {
-    return <div className="">
-        {urlToImage && <img className="rounded-3xl" src={urlToImage} alt={title} />}
-        <h2 className="font-bold p-2">{title}</h2>
+    article,
+    setSelected
+}: {article: Article, setSelected: Dispatch<SetStateAction<Article | null>> }) {
+    return <div className="" onClick={() => setSelected(article)}>
+        {article.urlToImage && <img className="rounded-3xl" src={article.urlToImage} alt={article.title} />}
+        <h2 className="font-bold p-2">{article.title}</h2>
     </div>
 }
