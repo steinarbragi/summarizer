@@ -9,8 +9,8 @@ export default function ArticleCard({
     publishedAt, 
     content
 }: Article) {
-    return <div className="bg-white rounded-lg p-5">
-        <img src={urlToImage} alt={title} />
-        <h2 className="text-black">{title}</h2>
+    return <div className="">
+        {urlToImage && <img className="rounded-3xl" src={urlToImage} alt={title} />}
+        <h2 className="font-bold p-2">{title}</h2>
     </div>
 }
