@@ -11,7 +11,7 @@ export default function Article({article, setSelected}: {
     setSelected: Dispatch<SetStateAction<Article | null>> 
 }) {
     return <div >
-        {article && <div className="fixed top-0 left-0 right-0 bottom-0 backdrop-blur-lg bg-white/60 dark:bg-black/60">
+        {article && <div className="fixed overflow-y-scroll top-0 left-0 right-0 bottom-0 backdrop-blur-lg bg-white/60 dark:bg-black/60">
         <button className="h-10 w-10 m-5 right-0 absolute" onClick={() => setSelected(null)}><XCircleIcon /></button>
             <div className="flex flex-row justify-center">
                 <div className=" p-5 max-w-3xl ">
