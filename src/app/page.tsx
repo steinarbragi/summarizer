@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen p-5 lg:p-24">
       <h2>News</h2>
-      <ArticleGrid articles={newsJson.articles} />
+      <ArticleGrid articles={newsJson?.articles} />
     </main>
   );
 }
