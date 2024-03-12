@@ -13,8 +13,6 @@ export default function GPTResponse({ url }: { url: string }) {
   return (
     <div>
       <p>{data.message.message.content}</p>
-      <br />
-      API Response: <pre>{JSON.stringify(data, null, 1)}</pre>
     </div>
   );
 }
