@@ -36,7 +36,7 @@ export default function Article({
                   alt={article.title}
                 />
               )}
-              <span className="bg-gray-500 w-auto py-1 px-3 rounded-full">
+              <span className="bg-gray-500 text-white w-auto py-1 px-3 rounded-full">
                 {article.source.name}
               </span>
               <p className="py-5">{article.description}</p>
