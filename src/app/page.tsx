@@ -1,4 +1,5 @@
 import ArticleGrid from './components/articlegrid';
+import Categories from './components/categories';
 
 export default async function Home() {
   const news = await fetch(
@@ -8,7 +9,8 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen p-5 lg:p-24">
-      <h2>News</h2>
+      <h2 className="text-3xl font-semibold">News</h2>
+      <Categories />
       <ArticleGrid articles={newsJson?.articles} />
     </main>
   );
