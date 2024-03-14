@@ -13,11 +13,14 @@ export default function ArticleCard({
     <div className="" onClick={() => setSelected(article)}>
       {article.urlToImage && (
         <img
-          className="rounded-3xl"
+          className="rounded-3xl mb-3"
           src={article.urlToImage}
           alt={article.title}
         />
       )}
+      <span className="bg-gray-500 w-auto py-1 px-3 rounded-full">
+        {article.source.name}
+      </span>
       <h2 className="font-bold p-2">{article.title}</h2>
     </div>
   );
