@@ -9,6 +9,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { url: string } }
 ) {
+  // comment
   const completion = await openai.chat.completions.create({
     messages: [
       {
