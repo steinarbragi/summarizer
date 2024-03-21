@@ -12,7 +12,7 @@ export default function GPTResponse({ url }: { url: string }) {
 
   return (
     <div>
-      <p>{data.message.message.content}</p>
+      <p>{data.summary}</p>
     </div>
   );
 }
