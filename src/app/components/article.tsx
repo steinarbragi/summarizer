@@ -9,9 +9,13 @@ import GPTResponse from './gptresponse';
 export default function Article({
   article,
   setSelected,
+  category,
+  length,
 }: {
   article: Article | null;
   setSelected: Dispatch<SetStateAction<Article | null>>;
+  category: string;
+  length: number;
 }) {
   return (
     <div>
@@ -46,7 +50,11 @@ export default function Article({
               >
                 View Original
               </Link>
-              <GPTResponse url={article.url} />
+              <GPTResponse
+                url={article.url}
+                category={category}
+                length={length}
+              />
             </div>
           </div>
         </div>

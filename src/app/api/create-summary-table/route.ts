@@ -9,7 +9,8 @@ export async function GET(request: Request) {
         Likes integer,
         Dislikes integer,
         Summary text,
-        Category varchar(255)
+        Category varchar(255),
+        Length integer
       );
     `;
     return NextResponse.json({ result }, { status: 200 });
