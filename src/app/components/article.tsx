@@ -1,10 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Dispatch, SetStateAction, useContext, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { XCircleIcon } from '@heroicons/react/16/solid';
 import GPTResponse from './gptresponse';
-import { SettingsContext } from '../context/settingsContext';
 
 /* eslint-disable @next/next/no-img-element */
 export default function Article({
@@ -14,8 +13,6 @@ export default function Article({
   article: Article | null;
   setSelected: Dispatch<SetStateAction<Article | null>>;
 }) {
-  const { selectedCategory, selectedLength } = useContext(SettingsContext);
-
   return (
     <div>
       {article && (
