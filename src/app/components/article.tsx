@@ -49,11 +49,7 @@ export default function Article({
               >
                 View Original
               </Link>
-              <GPTResponse
-                url={article.url}
-                category={selectedCategory}
-                length={selectedLength}
-              />
+              <GPTResponse url={article.url} />
             </div>
           </div>
         </div>
