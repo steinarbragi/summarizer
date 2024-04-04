@@ -1,22 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction, useContext, useState } from 'react';
 import { XCircleIcon } from '@heroicons/react/16/solid';
 import GPTResponse from './gptresponse';
+import { SettingsContext } from '../context/settingsContext';
 
 /* eslint-disable @next/next/no-img-element */
 export default function Article({
   article,
   setSelected,
-  category,
-  length,
 }: {
   article: Article | null;
   setSelected: Dispatch<SetStateAction<Article | null>>;
-  category: string;
-  length: number;
 }) {
+  const { selectedCategory, selectedLength } = useContext(SettingsContext);
+
   return (
     <div>
       {article && (
@@ -52,8 +51,8 @@ export default function Article({
               </Link>
               <GPTResponse
                 url={article.url}
-                category={category}
-                length={length}
+                category={selectedCategory}
+                length={selectedLength}
               />
             </div>
           </div>
