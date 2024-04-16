@@ -7,7 +7,7 @@ export default async function Category({
   params: { category: string };
 }) {
   const news = await fetch(
-    `https://newsapi.org/v2/top-headlines?language=en&q=${params.category}&from=2024-02-21&sortBy=publishedAt&apiKey=${process.env.NEWS_API_KEY}`
+    `https://newsapi.org/v2/top-headlines?language=en&q=${params.category}&from=2024-03-20&sortBy=publishedAt&apiKey=${process.env.NEWS_API_KEY}`
   );
   const newsJson = await news.json();
 
