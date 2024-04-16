@@ -12,7 +12,6 @@ export default async function Home() {
       <h2 className="text-3xl font-semibold">News</h2>
       <Categories />
       <ArticleGrid articles={newsJson?.articles} />
-      <pre>{JSON.stringify(newsJson, null, 1)}</pre>
     </main>
   );
 }
