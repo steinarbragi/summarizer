@@ -19,3 +19,5 @@ export default async function Category({
     </main>
   );
 }
+
+export const dynamic = 'force-dynamic';
